@@ -1,21 +1,140 @@
-<!-- Même <head> que index.html -->
-<title>À propos - UP Campus</title>
-<!-- ... même navbar ... -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - UP Campus | Formation langues & coaching</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-<section class="py-120">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center" data-aos="fade-up">
-                <h1 class="display-4 fw-bold mb-5">À propos d'UP Campus</h1>
-                <p class="lead mb-4">UP Campus est un centre de formation linguistique dédié à l’apprentissage et au perfectionnement des langues étrangères.</p>
-                <p class="text-muted fs-5">Nous accompagnons chaque personne selon son niveau et ses objectifs, grâce à des méthodes pédagogiques modernes, accessibles et surtout efficaces.</p>
-                <p class="text-muted fs-5">Que vous soyez salarié, demandeur d’emploi ou indépendant, nous vous aidons à monter en compétences et à financer votre formation (CPF, OPCO, Pôle Emploi…).</p>
-                <div class="mt-5">
-                    <a href="contact.php" class="btn btn-primary btn-lg">Me faire accompagner</a>
+    <!-- Navbar (identique) -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="assets/img/logo-upcampus.svg" alt="UP Campus" height="36">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="apropos.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero À propos -->
+    <section class="hero min-vh-100 d-flex align-items-center text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <h1 class="display-3 fw-bold mb-4">UP Campus,<br>c’est bien plus qu’une formation</h1>
+                    <p class="lead mb-4">Un accompagnement humain, moderne et 100 % adapté à vos objectifs.</p>
+                    <a href="contact.php" class="btn btn-light btn-lg px-5 py-3 shadow-lg">Parlons de votre projet</a>
+                </div>
+                <div class="col-lg-6 text-center mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="300">
+                    <div class="hero-blob"></div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Même footer -->
+    <!-- Mission & Valeurs -->
+    <section class="py-120 bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold">Notre mission</h2>
+                    <p class="lead text-muted">Rendre les langues accessibles à tous et transformer votre parcours professionnel.</p>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center p-5 bg-white rounded-4 shadow-sm h-100">
+                        <div class="icon mb-4 fs-1">🎯</div>
+                        <h4>Personnalisation</h4>
+                        <p class="text-muted">Chaque parcours est unique : on s’adapte à votre niveau, vos horaires et vos objectifs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center p-5 bg-white rounded-4 shadow-sm h-100">
+                        <div class="icon mb-4 fs-1">🚀</div>
+                        <h4>Progression rapide</h4>
+                        <p class="text-muted">Méthodes modernes, conversationnelles et immersives pour des résultats visibles en quelques semaines.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center p-5 bg-white rounded-4 shadow-sm h-100">
+                        <div class="icon mb-4 fs-1">💼</div>
+                        <h4>Financement facile</h4>
+                        <p class="text-muted">CPF, OPCO, Pôle Emploi… On gère toute la paperasse pour vous.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Équipe / À propos texte -->
+    <section class="py-120">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="display-5 fw-bold mb-4">Pourquoi nous choisir ?</h2>
+                    <p class="lead text-muted mb-4">
+                        UP Campus est un centre de formation linguistique indépendant basé à Boulogne-Billancourt. 
+                        Nous croyons que la maîtrise d’une langue étrangère est une vraie clé pour évoluer professionnellement et personnellement.
+                    </p>
+                    <p class="text-muted fs-5">
+                        Nos formateurs sont tous natifs ou bilingues, certifiés et passionnés. 
+                        Pas de cours ennuyeux : que des échanges vivants, des mises en situation réelles et un suivi ultra-personnalisé.
+                    </p>
+                    <div class="mt-4">
+                        <a href="contact.php" class="btn btn-primary btn-lg">Réserver un bilan gratuit</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-delay="200">
+                    <!-- Tu peux remplacer par une vraie photo d’équipe plus tard -->
+                    <div style="width: 100%; height: 450px; background: linear-gradient(135deg, #FD3A17, #FF5F40); border-radius: 30px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">
+                        UP Team 🔥
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-120 bg-gradient-primary text-white text-center">
+        <div class="container" data-aos="zoom-in">
+            <h2 class="display-5 fw-bold mb-4">Prêt(e) à décoller ?</h2>
+            <p class="lead mb-5">Premier rendez-vous offert – sans engagement</p>
+            <a href="contact.php" class="btn btn-light btn-lg px-5 py-3">Je réserve mon bilan</a>
+        </div>
+    </section>
+
+    <!-- Footer (identique) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>© 2025 UP Campus • Tous droits réservés</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>06 15 77 40 12 • upcampus.formation@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
