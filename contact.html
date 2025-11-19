@@ -1,0 +1,68 @@
+<?php
+if ($_POST) {
+    $name = strip_tags(trim($_POST["name"]));
+    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+    $message = strip_tags(trim($_POST["message"]));
+
+    if (empty($name) || empty($email) || empty($message)) {
+        http_response_code(400);
+        echo "Veuillez remplir tous les champs.";
+        exit;
+    }
+
+    $to = "upcampus.formation@gmail.com";
+    $subject = "Nouveau message depuis upcampus.fr";
+    $body = "Nom: $name\nEmail: $email\n\nMessage:\n$message";
+    $headers = "From: no-reply@upcampus.fr";
+
+    if (mail($to, $subject, $body, $headers)) {
+        echo "<div class='alert alert-success text-center'>Merci ! Votre message a bien été envoyé.</div>";
+    } else {
+        echo "<div class='alert alert-danger text-center'>Erreur, réessayez plus tard.</div>";
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- même head que index.html -->
+    <title>Contact - UP Campus</title>
+</head>
+<body>
+    <!-- même navbar -->
+
+    <section class="py-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <h1 class="display-4 fw-bold text-center mb-5">Contactez-nous</h1>
+                    
+                    <form method="post" class="p-5 bg-white shadow rounded">
+                        <div class="mb-4">
+                            <label class="form-label">Nom & Prénom</label>
+                            <input type="text" name="name" class="form-control form-control-lg" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control form-control-lg" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Message</label>
+                            <textarea name="message" rows="6" class="form-control form-control-lg" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Envoyer le message</button>
+                    </form>
+
+                    <div class="mt-5 text-center">
+                        <p class="mb-2"><strong>Téléphone :</strong> 06 15 77 40 12</p>
+                        <p><strong>Email :</strong> upcampus.formation@gmail.com</p>
+                        <p class="text-muted">Boulogne-Billancourt (92100) – Île-de-France</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- même footer -->
+</body>
+</html>
