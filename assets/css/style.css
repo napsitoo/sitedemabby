@@ -1,0 +1,86 @@
+:root {
+    --primary: #FD3A17;
+    --secondary: #FF5F40;
+    --dark: #222222;
+    --light: #f8f9fa;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.navbar {
+    background: rgba(255,255,255,0.95) !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    padding: 1rem 0;
+}
+
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-blob {
+    width: 500px;
+    height: 500px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: blob 20s infinite;
+}
+
+@keyframes blob {
+    0%,100% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40%/50% 60% 30% 60%; }
+}
+
+.btn-primary {
+    background: var(--primary);
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(253,58,23,0.4);
+}
+
+.card-service {
+    transition: all 0.4s;
+    border-radius: 20px;
+    background: white;
+}
+
+.card-service:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+.card-service .icon {
+    font-size: 3.5rem;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.py-120 { padding: 120px 0; }
+
+@media (max-width: 768px) {
+    .py-120 { padding: 80px 0; }
+    .hero h1 { font-size: 2.5rem; }
+}
