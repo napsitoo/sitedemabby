@@ -1,0 +1,10 @@
+<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond arrondi orange -->
+  <rect x="0" y="8" width="180" height="32" rx="16" fill="#FD3A17"/>
+  <!-- Petit carré jaune qui dépasse à droite -->
+  <rect x="50" y="8" width="48" height="32" rx="12" fill="#FFF940"/>
+  <!-- Texte UP Campus -->
+  <text x="62" y="32" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="700" fill="#222222">
+    UP Campus
+  </text>
+</svg>
